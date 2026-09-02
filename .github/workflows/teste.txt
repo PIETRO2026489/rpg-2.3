@@ -24,13 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install pygame pyinstaller
 
-      - name: Gerar EXE
+      - name: Criar EXE
         run: |
-          pyinstaller --onefile --windowed --name Elementaria rpg.py
+          pyinstaller --onefile --windowed rpg.py
 
-      - name: Disponibilizar EXE
+      - name: Salvar EXE
         uses: actions/upload-artifact@v4
         with:
-          name: Elementaria-Windows
-          path: dist/Elementaria.exe
-
+          name: ReinoDeElementaria
+          path: dist/rpg.exe
