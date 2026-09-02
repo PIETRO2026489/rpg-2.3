@@ -26,7 +26,7 @@ jobs:
 
       - name: Criar EXE
         run: |
-          pyinstaller --onefile --windowed rpg.py
+          pyinstaller --onefile --windowed jogo.py
 
       - name: Salvar EXE
         uses: actions/upload-artifact@v4
